@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez1/horas.h
+iostream
+-
+iomanip
+-
+stdexcept
+-
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez1/solution.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+fstream
+-
+horas.h
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez1/horas.h
+

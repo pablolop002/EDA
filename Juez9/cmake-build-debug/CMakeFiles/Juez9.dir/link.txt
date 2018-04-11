@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Juez9.dir/main.cpp.o  -o Juez9.exe -Wl,--out-implib,libJuez9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

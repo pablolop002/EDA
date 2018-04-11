@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Juez11.dir/main.cpp.o  -o Juez11.exe -Wl,--out-implib,libJuez11.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

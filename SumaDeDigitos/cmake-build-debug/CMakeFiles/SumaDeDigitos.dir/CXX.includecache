@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/SumaDeDigitos/main.cpp
+iostream
+-
+stack_eda.h
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/SumaDeDigitos/stack_eda.h
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/SumaDeDigitos/stack_eda.h
+stdexcept
+-
+utility
+-
+

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez2/horas.h
+iostream
+-
+iomanip
+-
+stdexcept
+-
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez2/peliculas.h
+iostream
+-
+iomanip
+-
+stdexcept
+-
+horas.h
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez2/horas.h
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez2/solution.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+fstream
+-
+horas.h
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez2/horas.h
+peliculas.h
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/Juez2/peliculas.h
+

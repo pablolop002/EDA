@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/SumaDeDigitos.dir/main.cpp.o  -o SumaDeDigitos.exe -Wl,--out-implib,libSumaDeDigitos.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

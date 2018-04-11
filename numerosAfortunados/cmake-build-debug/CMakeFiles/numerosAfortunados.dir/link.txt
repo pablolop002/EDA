@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/numerosAfortunados.dir/main.cpp.o  -o numerosAfortunados.exe -Wl,--out-implib,libnumerosAfortunados.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

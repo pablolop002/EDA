@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/EV1/main.cpp
+iostream
+-
+fstream
+-
+queue_eda.h
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/EV1/queue_eda.h
+
+/cygdrive/c/Users/pablo/CLionProjects/EDA2/EV1/queue_eda.h
+stdexcept
+-
+
