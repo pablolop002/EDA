@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled main.cpp Cola.h listaEnlazada.h Pila.h listaE.h)
+add_executable(untitled main.cpp Cola.h Pila.h listaE.h)

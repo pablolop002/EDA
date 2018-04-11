@@ -1,21 +1,64 @@
+// Lista doblemente enlazada
+
 #ifndef UNTITLED_LISTAE_H
 #define UNTITLED_LISTAE_H
 
 template<class E>
-class listaE {
+friend
+class Nodo {
 protected:
-    struct Nodo {
-        E _elem;
-        Nodo *_next;
-        Nodo *_prev;
+    E _elem;
+    Nodo *_next;
+    Nodo *_prev;
+public:
+    Nodo() : _next(nullptr), _prev(nullptr) {}
 
-        Nodo() : _next(nullptr), _prev(nullptr) {}
+    explicit Nodo(const E &elem) : _elem(elem), _next(nullptr), _prev(nullptr) {}
 
-        explicit Nodo(const E &elem) : _elem(elem), _next(nullptr), _prev(nullptr) {}
+    Nodo(const E &elem, Nodo *sig, Nodo *prev) : _elem(elem), _next(sig), _prev(prev) {}
+};
 
-        Nodo(const E &elem, Nodo *sig, Nodo *prev) : _elem(elem), _next(sig), _prev(prev) {}
-    };
+template<class E>
+friend
+class Iterator : public Nodo {
+protected:
+    Nodo *_act; // Puntero que usamos de iterador
+public:
+    void avanza() {
+        if (_act == nullptr)
+            throw "Acceso Invalido";
+        _act = _act->_next;
+    }
 
+    const E &elem() const {
+        if (_act == nullptr)
+            throw "Acceso Invalido";
+        return _act->_elem;
+    }
+
+    bool operator==(const Iterator other) {
+        return _act == other._act;
+    }
+
+    Iterator() {
+        _act = nullptr;
+    }
+
+    Iterator(Nodo *act) {
+        _act = act;
+    }
+
+    void pon(E &elem) {
+        if (_act == nullptr)
+            throw "Acceso Invalido";
+        _act->_elem = elem;
+    }
+};
+
+template<class E>
+friend
+class listaE : public Nodo, public Iterator {
+protected:
     Nodo *_prim;
     Nodo *_ult;
     int _num_elems;
@@ -51,7 +94,7 @@ public:
         return paux;
     }
 
-    void ponIzq(const E &elem) {
+    void cons(const E &elem) {
         _num_elems++;
         _prim = insertaElem(elem, nullptr, _prim);
         if (_ult == nullptr)
@@ -117,6 +160,35 @@ public:
             aux = aux->_next;
         }
         return aux->_elem;
+    }
+
+    void liberalista() {
+        while (!esVacia()) {
+            borraElem(_prim);
+        }
+    }
+
+    Iterator principio() {
+        return Iterator(_prim);
+    };
+
+    Iterator final() {
+        return Iterator(_ult);
+    };
+
+    void insertar(const E &elem, const Iterator &it) {
+        if (_prim == it._act)
+            cons(elem);
+        else if (_ult == it._act)
+            ponDr(elem);
+        else {
+            insertaElem(elem, it._act->_prev, it._act);
+            _num_elems++;
+        }
+    }
+
+    Iterator borra(const Iterator &it){
+        
     }
 };
 
